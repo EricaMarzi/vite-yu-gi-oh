@@ -67,6 +67,5 @@ main {
 /*Pokedex*/
 section#pokedex {
     background-color: #e6e6e6;
-    min-height: 400px;
 }
 </style>
