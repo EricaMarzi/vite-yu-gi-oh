@@ -1,14 +1,15 @@
 <script>
 import axios from 'axios';
+import { store } from '../assets/scss/data/store.js'
 const endpoint = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons'
 export default {
     name: 'PokemonList',
     data: () => ({
-        pokemons: []
+        store
     }),
     created() {
         axios.get(endpoint).then(res => {
-            this.pokemons = res.data.docs
+            this.store = res.data.docs
         })
     }
 };
@@ -16,7 +17,7 @@ export default {
 
 <template>
     <div class="row row-cols-6 gap-3">
-        <div class="col rounded py-2" v-for="pokemon in pokemons">
+        <div class="col rounded py-2" v-for="pokemon in store">
             <div class="card-top d-flex justify-content-between">
                 <h6>{{ pokemon.name }}</h6>
                 <p>#{{ pokemon.number }}</p>
