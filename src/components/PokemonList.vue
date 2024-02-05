@@ -16,18 +16,18 @@ export default {
 
 <template>
     <div class="row row-cols-6 gap-3">
-        <div class="col rounded">
+        <div class="col rounded" v-for="pokemon in pokemons">
             <div class="card-top d-flex justify-content-between">
-                <h5>Bulbacoso</h5>
-                <p>#001</p>
+                <h5>{{ pokemon.name }}</h5>
+                <p>#{{ pokemon.number }}</p>
             </div>
             <div class="card-bottom d-flex mb-2">
                 <div class="card-left d-flex flex-column justify-content-end gap-2">
-                    <div class="badge rounded-pill text-bg-primary">Tipo 1</div>
-                    <div class="badge rounded-pill text-bg-primary">Tipo 2</div>
+                    <div class="badge rounded-pill text-bg-primary">{{ pokemon.type1 }}</div>
+                    <div class="badge rounded-pill text-bg-primary">{{ pokemon.type2 }}</div>
                 </div>
                 <div class="card-right">
-                    <img class="img-fluid" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
+                    <img class="img-fluid" :src="pokemon.imageUrl" alt="">
                 </div>
             </div>
         </div>
