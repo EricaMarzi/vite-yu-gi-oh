@@ -9,20 +9,20 @@ export default {
   }),
   components: {
     AppMain, AppHeader
+  },
+  methods: {
+    changeType() {
+      console.log('change')
+    }
   }
 };
 </script>
 
 <template>
-  <AppHeader :pokemonType="pokemonType" />
+  <AppHeader :pokemonType="pokemonType" @type-select-change="changeType" />
   <AppMain />
 </template>
 
 <style lang="scss">
 @use './assets/scss/style.scss';
-// @use './assets/scss/_vars.scss' as *;
-
-// body {
-//   background-color: $bg-color;
-// }
 </style>

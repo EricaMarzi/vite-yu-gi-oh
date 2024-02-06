@@ -1,8 +1,10 @@
 <script>
 export default {
+    name: 'PokemonType',
     props: {
         pokemonType: Array
-    }
+    },
+    emits: ['type-select-change']
 }
 </script>
 
@@ -16,7 +18,7 @@ export default {
         </section>
 
         <section id="select-type">
-            <select class="form-select">
+            <select class="form-select" @change="$emit('type-select-change')">
                 <option selected>All</option>
                 <option v-for="(type, i) in pokemonType" :key="i" :value="i"> {{ type }}</option>
             </select>
