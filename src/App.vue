@@ -1,11 +1,11 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
-import { pokemonType } from './assets/scss/data'
+import { pokemonTypes } from './assets/scss/data'
 export default {
   name: 'Pokedex',
   data: () => ({
-    pokemonType
+    pokemonTypes
   }),
   components: {
     AppMain, AppHeader
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader :pokemonType="pokemonType" @type-select-change="changeType" />
+  <AppHeader :pokemonTypes="pokemonTypes" @type-select-change="changeType" />
   <AppMain />
 </template>
 

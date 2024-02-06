@@ -1,3 +1,3 @@
-import pokemonType from './_type';
+import pokemonTypes from './_type';
 
-export { pokemonType };
+export { pokemonTypes };
