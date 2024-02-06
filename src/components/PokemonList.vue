@@ -24,8 +24,10 @@ export default {
             </div>
             <div class="card-bottom d-flex mb-2">
                 <div class="card-left d-flex flex-column justify-content-end gap-2">
-                    <div class="badge rounded-pill text-bg-secondary">{{ pokemon.type1 }}</div>
-                    <div class="badge rounded-pill text-bg-secondary">{{ pokemon.type2 }}</div>
+                    <div class="badge rounded-pill text-bg-secondary">{{ pokemon.type1
+                    }}</div>
+                    <div class="badge rounded-pill text-bg-secondary">{{ pokemon.type2
+                    }}</div>
                 </div>
                 <div class="card-right">
                     <img class="img-fluid" :src="pokemon.imageUrl" alt="">
