@@ -1,6 +1,8 @@
 <script>
 export default {
-
+    props: {
+        pokemonType: Array
+    }
 }
 </script>
 
@@ -14,11 +16,9 @@ export default {
         </section>
 
         <section id="select-type">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="form-select">
+                <option selected>All</option>
+                <option v-for="(type, i) in pokemonType" :key="i" :value="i"> {{ type }}</option>
             </select>
         </section>
     </header>
@@ -45,8 +45,6 @@ header {
 
 .blue {
     background-color: $circle-blue;
-    // background-size: 50px 50px;
-    // background-color: linear-gradient(to bottom right, white, $circle-blue);
 }
 
 .red {

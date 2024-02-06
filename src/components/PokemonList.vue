@@ -39,9 +39,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/bgcard.scss' as *;
-@use '../assets/scss/vars.scss' as *;
-
 .row {
     display: flex;
     justify-content: center;
